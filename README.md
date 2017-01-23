@@ -1,5 +1,5 @@
 # ITProTV karaoke view
-A user style for better viewing of episodes on ITProTV along with the rolling transcript. [Published on userstyles.org](https://userstyles.org/styles/137972/itprotv-karaoke-view)
+A user style for better viewing of episodes on [ITProTV](https://itpro.tv/) along with the rolling transcript. [Published on userstyles.org](https://userstyles.org/styles/137972/itprotv-karaoke-view)
 
 ## Description:
 Shows episodes on ITProTV with a larger video area, and the rolling transcript just beneath it. Also removes distracting elements while watching.
