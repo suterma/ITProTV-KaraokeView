@@ -1,4 +1,4 @@
-# ITProTV KaraokeView
+# ITProTV karaoke view
 A user style for better viewing of episodes on ITProTV along with the rolling transcript. [Published on userstyles.org](https://userstyles.org/styles/137972/itprotv-karaoke-view)
 
 ## Description:
