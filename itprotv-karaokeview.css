@@ -55,10 +55,11 @@ Feel free to change anyting as you like.
     }
 }
 /*----------------------------------------------
-       Episode topics (#courseSideContainer) space 
-       usage improvements
-     --------------------------------------------/*    
-    /* improve space usage in episode topics */
+  Episode topics (#courseSideContainer) space 
+  usage improvements
+  --------------------------------------------/*    
+  
+/* improve space usage in episode topics */
 
 div#courseSideContainer {
     padding-left: 0px;
@@ -84,9 +85,9 @@ li.courseEpisode.list-unstyled {
     margin-bottom: 0px;
 }
 /*----------------------------------------------
-      Episode topics (#courseSideContainer) flyout 
-      modifications
-      --------------------------------------------/*        
+  Episode topics (#courseSideContainer) flyout 
+  modifications
+  --------------------------------------------/*        
     
         /* Add an area with a drag handle icon that 
     allows to pull the fly-out menu. */
@@ -99,13 +100,9 @@ div#courseSideContainer::after {
     top: 0;
     right: -70px;
     height: 58px;
-    background-color: transparent;
     background-color: lightgrey;
     border: 1px solid darkgrey;
     border-left: 1px solid lightgrey;
-    /* for testing purposes, a highlighted background is useful */
-    /*background-color: yellow;*/
-    
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     padding-left: 15px;
@@ -180,10 +177,7 @@ div#courseSideContainer {
 }
 /* fly in on hover (icluding hover on the handle icon) */
 
-div#courseSideContainer
-/*:hover*/
-
-{
+div#courseSideContainer:hover {
     left: 0;
     transition: 0.075s ease-in-out;
 }
@@ -203,7 +197,7 @@ div#courseSideContainer
     overflow-y: scrollbar;
 }
 /*----------------------------------------------
-    content, coursePage & Episode area modifications
+  content, coursePage & Episode area modifications
   --------------------------------------------/*   
 
 /* Take non-sticky header & footer into consideration */
@@ -257,7 +251,8 @@ div#courseSideContainer
 #episode-div #episode-main > div.row.episodes-nav {
     display: none;
 }
-/* Hide the existing ratings, you probably don't want to rate while watching anyway. */
+/* Hide the existing ratings, you probably don't 
+want to rate while watching anyway. */
 /* Speaker rating */
 
 #episode-main span.rating {
@@ -298,7 +293,7 @@ div.rating {
   Footer area modifications
   --------------------------------------------/*    
 
-    /* Dont use any footer, who wants to watch the footer all the time? */
+/* Dont use any footer, who wants to watch the footer all the time? */
 
 body > footer {
     display: none;
