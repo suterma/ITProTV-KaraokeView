@@ -21,7 +21,8 @@ Feel free to change anyting as you like.
 /*----------------------------------------------
   Header modifications
   --------------------------------------------/*
-/* Dont use the sticky nav bar while watching episodes. Frees up the space instead. */
+/* Dont use the sticky nav bar while watching episodes. 
+   Frees up the space instead. */
 
 #navTop {
     position: relative;
@@ -62,23 +63,22 @@ Feel free to change anyting as you like.
 /* improve space usage in episode topics */
 
 div#courseSideContainer {
-    padding-left: 0px;
-    padding-right: 0px;
+    background-color: hsla(0, 0%, 98%, 1);
+    border: 1px solid #bbb;
     /* Use max windown height */
     
     max-height: 95%;
     /*verflow-y: scroll;*/
 }
-
 /* Introduce a vertical scrollbar, because the
     menu can grow larger than the window height */
 
 #top-id {
     max-height: calc(100% - 90px);
     /* On small widths just use a scroll bar on the top-ids */
+    
     overflow-y: auto;
 }
-
 @media (min-width: 768px) {
     /* For larger width, override !important original stuff. */
     
@@ -87,20 +87,20 @@ div#courseSideContainer {
         max-height: calc(100% - 50px);
     }
 }
-
-/* improve space usage in the course menu does 
-    not work, most likely because of javascript running */
 /* Shrink menu entries */
-
+/* improve space usage in the course menu */
+/* Does not work, most likely because of javascript running  
 div#courseSideContainer#top-id.navbar-collapse {
+
     padding-left: 0px;
     padding-right: 0px;
-}
+}*/
+
 li.courseEpisode.list-unstyled {
     margin-bottom: 0px;
 }
 /* Never collapse the course menu */
-/* TODO does not work, most likely because of javascript running 
+/* Does not work, most likely because of javascript running 
     div#courseSideContainer#top-id.collapse.navbar-collapse.course-menu-collapse {
         display: block !important;
         height: auto !important;
@@ -124,9 +124,9 @@ div#courseSideContainer::after {
     top: 0;
     right: -70px;
     height: 58px;
-    background-color: lightgrey;
+    background-color: hsla(0, 0%, 98%, 1);
     border: 1px solid darkgrey;
-    border-left: 1px solid lightgrey;
+    border-left: 2px solid hsla(0, 0%, 98%, 1);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     padding-left: 15px;
@@ -134,9 +134,9 @@ div#courseSideContainer::after {
     padding-top: 5px;
     /* Use some shadow to distinguish the element from the page */
     
-    -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.48);
-    -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.48);
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.48);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.29);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.29);
     /* Above the page */
     
     z-index: 101;
@@ -144,10 +144,6 @@ div#courseSideContainer::after {
 /* Modify the Episode topics to glue them to the top left windows edge */
 
 div#courseSideContainer {
-    /* Same color as top nav bar to keep it more alike */
-    
-    background-color: lightgrey;
-    border: 1px solid #bbb;
     /* glue it to the left part of the whole windows 
         all the time for easy access */
     
@@ -163,14 +159,14 @@ div#courseSideContainer {
     float: left;
     /* Use some shadow to distinguish the element from the page */
     
-    -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.48);
-    -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.48);
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.48);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.29);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.29);
 }
 /* Defining the Episode topics nav menu and fly out widths, 
     adapted to media width */
 
-@media (max-width: 767px) {
+
     div#courseSideContainer {
         /* Move additional pixels left to move the shadow                                 out of the screen area too */
         
@@ -178,7 +174,7 @@ div#courseSideContainer {
         width: 50%;
         transition: 0.075s ease-in-out;
     }
-}
+
 @media (min-width: 768px) {
     div#courseSideContainer {
         /* Move additional pixels left to move the shadow                                out of the screen area too */
@@ -199,13 +195,11 @@ div#courseSideContainer {
 }
 /* fly in on hover (icluding hover on the handle icon) */
 
-div#courseSideContainer
-/*:hover*/
-
-{
+div#courseSideContainer:hover {
     left: 0;
     transition: 0.075s ease-in-out;
 }
+
 /*----------------------------------------------
   content, coursePage & Episode area modifications
   --------------------------------------------/*   
