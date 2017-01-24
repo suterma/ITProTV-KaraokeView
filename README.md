@@ -14,3 +14,8 @@ It optimizes the viewing experience when reading along the transcript, by moving
 
 Notes: The modification are grouped among visual elements to keep them somewhat easier recognisable and modifiyable. 
 
+## Credits:
+Box shadow generated with: http://www.cssmatic.com/box-shadow
+Chevron icon from: https://useiconic.com/open
+
+
