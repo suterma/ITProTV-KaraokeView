@@ -69,10 +69,25 @@ div#courseSideContainer {
     max-height: 95%;
     /*verflow-y: scroll;*/
 }
+
+/* Introduce a vertical scrollbar, because the
+    menu can grow larger than the window height */
+
 #top-id {
     max-height: calc(100% - 90px);
+    /* On small widths just use a scroll bar on the top-ids */
     overflow-y: auto;
 }
+
+@media (min-width: 768px) {
+    /* For larger width, override !important original stuff. */
+    
+    #top-id {
+        overflow-y: auto!important;
+        max-height: calc(100% - 50px);
+    }
+}
+
 /* improve space usage in the course menu does 
     not work, most likely because of javascript running */
 /* Shrink menu entries */
@@ -84,6 +99,15 @@ div#courseSideContainer#top-id.navbar-collapse {
 li.courseEpisode.list-unstyled {
     margin-bottom: 0px;
 }
+/* Never collapse the course menu */
+/* TODO does not work, most likely because of javascript running 
+    div#courseSideContainer#top-id.collapse.navbar-collapse.course-menu-collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;       
+        
+    }*/
 /*----------------------------------------------
   Episode topics (#courseSideContainer) flyout 
   modifications
@@ -107,8 +131,6 @@ div#courseSideContainer::after {
     border-bottom-right-radius: 15px;
     padding-left: 15px;
     padding-right: 5px;
-    /*padding-top: 50%;*/
-    
     padding-top: 5px;
     /* Use some shadow to distinguish the element from the page */
     
@@ -148,7 +170,7 @@ div#courseSideContainer {
 /* Defining the Episode topics nav menu and fly out widths, 
     adapted to media width */
 
-@media (min-width: 0px) {
+@media (max-width: 767px) {
     div#courseSideContainer {
         /* Move additional pixels left to move the shadow                                 out of the screen area too */
         
@@ -177,24 +199,12 @@ div#courseSideContainer {
 }
 /* fly in on hover (icluding hover on the handle icon) */
 
-div#courseSideContainer:hover {
+div#courseSideContainer
+/*:hover*/
+
+{
     left: 0;
     transition: 0.075s ease-in-out;
-}
-/* Never collapse the course menu */
-/* TODO does not work, most likely because of javascript running 
-    div#courseSideContainer#top-id.collapse.navbar-collapse.course-menu-collapse {
-        display: block !important;
-        height: auto !important;
-        padding-bottom: 0;
-        overflow: visible !important;       
-        
-    }*/
-/* Introduce a vertical scrollbar, because the
-    menu can grow larger than the window height */
-
-#top-id {
-    overflow-y: scrollbar;
 }
 /*----------------------------------------------
   content, coursePage & Episode area modifications
